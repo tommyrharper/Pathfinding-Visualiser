@@ -1,37 +1,41 @@
-import React, { Component } from 'react'
-import Node from './Node/Node'
+import React, { Component } from "react";
+import Node from "./Node/Node";
 
-import './PathfindingVisualser.css'
+import "./PathfindingVisualser.css";
 
 export default class PathfindingVisualiser extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      nodes: []
+      nodes: [],
     };
   }
 
   componentDidMount() {
     const nodes = [];
     for (let row = 0; row < 15; row++) {
-      const currentRow = []
+      const currentRow = [];
       for (let col = 0; col < 50; col++) {
-        currentRow.push([])
+        currentRow.push([]);
       }
-      nodes.push(currentRow)
+      nodes.push(currentRow);
     }
-    this.setState({nodes})
+    this.setState({ nodes });
   }
   render() {
-    const {nodes} = this.state
-    console.log(nodes)
+    const { nodes } = this.state;
+    console.log(nodes);
 
-    return(
+    return (
       <div className="grid">
         {nodes.map((row, rowIdx) => {
-          return <div>
-                  {row.map((node, nodeIdx) => <Node></Node>)}
-                </div>
+          return (
+            <div key={rowIdx}>
+              {row.map((node, nodeIdx) => (
+                <Node key={nodeIdx} isStart={true}></Node>
+              ))}
+            </div>
+          );
         })}
       </div>
     );
