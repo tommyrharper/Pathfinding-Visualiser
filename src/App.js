@@ -1,6 +1,6 @@
-import React from 'react';
-import PathfindingVisualiser from './PathfindingVisualiser/PathfindingVisualiser'
-import './App.css';
+import React from "react";
+import PathfindingVisualiser from "./PathfindingVisualiser/PathfindingVisualiser";
+import "./App.css";
 
 function App() {
   return (
