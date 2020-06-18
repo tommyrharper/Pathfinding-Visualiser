@@ -19,8 +19,8 @@ export default class PathfindingVisualiser extends Component {
         const currentNode = {
           col,
           row,
-          isStart: row === 10 && col === 5,
-          isFinish: row === 10 && col === 45,
+          isStart: row === 7 && col === 5,
+          isFinish: row === 7 && col === 45,
         };
         currentRow.push(currentNode);
       }
